@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.meet4s.twentyfourgame" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>24 Game - Math</name>
+    <description>
+        24 Game is a math game. There are four numbers 1-9 given, and four operators : addition +, substraction -, multiplication *, division /.
+        You are required to use all four numbers to get 24.
+        e.g. 1, 8, 5, 7
+        Solutions: (solutions can be many)
+        ((1-5)+7)*8 = 24
+        (1+(7-5))*8 = 24
+
+        Drag and drop the box to the other box. Four operations will appear between first box and the second box.
+
+        Press GIVE UP to show three possible solutions.
+
+        All numbers presented in the game will have minimum ONE SOLUTION.
+    </description>
+    <author email="meetforsport@gmail.com" href="http://www.kennyhartono.com">
+        Kenny Hartono
+    </author>
+    <content src="index.html" />
+
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="com.rjfun.cordova.httpd" />
+    <gap:config-file platform="android" parent="/manifest" mode="delete">
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    </gap:config-file>
+
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="auto" />
+    <icon src="icon.png" />
+    <engine name="android" spec="^4.0.2" />
+
+    <access origin="*" />
+</widget>
